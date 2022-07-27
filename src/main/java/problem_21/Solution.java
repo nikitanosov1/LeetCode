@@ -2,7 +2,7 @@ package problem_21;
 
 import java.util.Objects;
 
-public class Solution {
+class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode result = new ListNode();
         ListNode currentNode = result;
