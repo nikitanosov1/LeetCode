@@ -1,6 +1,6 @@
 package problem_66;
 
-public class Solution {
+class Solution {
     public int[] plusOne(int[] digits) {
         for (int i = digits.length - 1; i > -1; --i) {
             if (digits[i] < 9){
