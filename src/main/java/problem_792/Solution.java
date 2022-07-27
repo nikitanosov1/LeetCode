@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 
-public class Solution {
+class Solution {
     public int numMatchingSubseq(String s, String[] words) {
         int result = 0;
         Map<Character, Queue<String>> map = new HashMap<>();
