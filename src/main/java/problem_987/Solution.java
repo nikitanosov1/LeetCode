@@ -11,7 +11,8 @@ class Solution {
         for (Integer col : map.keySet()) {
             List<Integer> colVals = new ArrayList<>();
             for (Integer row : map.get(col).keySet()) {
-                colVals.addAll(map.get(col).get(row).stream().sorted().toList());
+                Collections.sort(map.get(col).get(row));
+                colVals.addAll(map.get(col).get(row));
             }
             result.add(colVals);
         }
