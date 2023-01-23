@@ -2,6 +2,20 @@ package problem_997;
 
 class Solution {
     public int findJudge(int n, int[][] trust) {
+        // bad memory, good time
+        int[][] counts = new int[n][2];
+
+        for (int i = 0; i < trust.length; ++i) {
+            counts[trust[i][1] - 1][1]++;
+            counts[trust[i][0] - 1][0]++;
+        }
+
+        for (int i = 0; i < n; ++i) {
+            if (counts[i][0] == 0 && counts[i][1] == n - 1) return i + 1;
+        }
+        return -1;
+
+        /* good memory
         int xorResult = 0;
         for (int i = 1; i < n + 1; ++i) {
             xorResult ^= i;
@@ -27,5 +41,6 @@ class Solution {
             }
         }
         return -1;
+        */
     }
 }
